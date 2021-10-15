@@ -1,4 +1,4 @@
-let pokemonList = [ // Use solid braces for arrays.
+let pokemonList = [ // Use solid braces for arrays. !!!! Use LET if variable will change, or CONST if variable will not change
   { name: 'Bulbasaur', height: 0.7, type: ['Grass', 'Poison'] }, // Curly braces are for objects (unordered list of data).
   { name: 'Charmander', height: 0.6, type: 'Fire' }, // Use single quotes for string and number has no quotes.
   { name: 'Squirtle', height: 0.5, type: 'Water' },
@@ -11,3 +11,4 @@ let pokemonList = [ // Use solid braces for arrays.
   { name: 'Eevee', height: 0.3, type: 'Normal' }
 ];
 // You can choose which line you are going to comment with CTRL /
+// && (First False, Last Truth), || (First Truth, First False)
