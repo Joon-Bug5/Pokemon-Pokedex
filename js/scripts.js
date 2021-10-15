@@ -12,3 +12,6 @@ let pokemonList = [ // Use solid braces for arrays. !!!! Use LET if variable wil
 ];
 // You can choose which line you are going to comment with CTRL /
 // && (First False, Last Truth), || (First Truth, First False)
+for (let list = 0; list < pokemonList.length; list++){
+  document.write(pokemonList[list].name + '- (Height: ' +pokemonList[list].height + ' m),' + ' ');
+}
