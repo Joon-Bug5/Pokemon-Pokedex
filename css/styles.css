@@ -1,19 +1,42 @@
 *{
   box-sizing: border-box;
   margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  line-height: 2;
 }
 
-header{
+:root{
+  --pure-blue-color: rgba(0, 0, 255, 0.7);
+  --ink-black-color: #06080f;
+  --easter-red-color: rgba(201, 37, 25, 0.7);
+  --white-color: #fff;
+  --emerald-green-color: #50c878;
+}
 
+.page-header{
+  background-color: var(--pure-blue-color);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.page-header__item{
+  width: 200px;
 }
 
 body{
+  background-color: var(--easter-red-color);
+  min-height: 100vh;
   text-align: center;
 }
 
-footer{
-
-}
+/* .page-footer{
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--pure-blue-color);
+} */
 
 h1{
 
@@ -25,4 +48,12 @@ h2{
 
 p{
   padding: 10px;
+}
+
+.home-title{
+  text-align: center;
+}
+
+.pokemon-info{
+  text-align: center;
 }
