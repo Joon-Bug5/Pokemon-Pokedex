@@ -26,28 +26,23 @@
 
 body{
   background-color: var(--easter-red-color);
-  min-height: 100vh;
-  text-align: center;
 }
 
-/* .page-footer{
-  clear: both;
-  display: flex;
-  flex-direction: column;
+.pokemon-list{
   text-align: center;
-  background-color: var(--pure-blue-color);
-} */
+  padding: 5px;
+}
 
 h1{
-
+  font-size: 50px;
 }
 
 h2{
-
+  font-size: 30px;
 }
 
 p{
-  padding: 10px;
+  display: inline-block;
 }
 
 .home-title{
@@ -56,4 +51,14 @@ p{
 
 .pokemon-info{
   text-align: center;
+}
+
+.list-title{
+  text-decoration: underline;
+}
+
+span{
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 18px;
 }
