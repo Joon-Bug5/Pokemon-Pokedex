@@ -12,9 +12,16 @@ let pokemonList = [ // Use solid braces for arrays. !!!! Use LET if variable wil
 ];
 // You can choose which line you are going to comment with CTRL /
 // && (First False, Last Truth), || (First Truth, First False)
-for (let i = 0; i < pokemonList.length; i++) {
-  document.write('<br>' + '<p>' + ('<span>' + pokemonList[i].name + '</span>') + ' - (Height: ' + pokemonList[i].height + ' m)' + ' ' + '</p>'); // Can add HTML elements within JS.
-  if (pokemonList[i].height >= 2) {
+// for (let i = 0; i < pokemonList.length; i++) {
+//   document.write('<br>' + '<p>' + ('<span>' + pokemonList[i].name + '</span>') + ' - (Height: ' + pokemonList[i].height + ' m)' + ' ' + '</p>'); // Can add HTML elements within JS.
+//   if (pokemonList[i].height >= 2) {
+//     document.write(' - "Wow, that\'s big!" ');
+//   }
+// }
+// Below is a basic function that can be written similar to above code
+pokemonList.forEach(function (item) {
+  document.write('<br>' + '<p>' + ('<span>' + item.name + '</span>') + ' - (Height: ' + item.height + ' m)' + ' ' + '</p>');
+  if (item.height >= 2) {
     document.write(' - "Wow, that\'s big!" ');
   }
-}
+})();
