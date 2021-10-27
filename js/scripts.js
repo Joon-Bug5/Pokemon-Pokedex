@@ -13,32 +13,42 @@ let pokemonRepository = (function () {
   function add (pokemon) { // adding to the last list of the array
     pokemonList.push(pokemon);
   }
+
   function getAll () { // calls out the whole list of the array
     return pokemonList;
   }
+
+  function addListItem (pokemon) {
+    let mainPokemon = document.querySelector('.pokemon-list');// selecting the class in the HTML, need '' quotes and . to choose the class same as CSS
+    let listPokemon = document.createElement('li'); // creates the list element
+    let button = document.createElement('button'); // creates the button element
+    button.innerText = pokemon.name; // name of the button in the inner text of the button
+    button.classList.add('button-class'); // adding the class, which then you can create the style of the button on class
+    listPokemon.appendChild(button);// showing the list as a button that was just created
+    mainPokemon.appendChild(listPokemon);// showing the list in the class of the selector
+    button.addEventListener('click', function () { // addEventListener creates the function of what the button does when clicking
+      showDetails(pokemon)// from the other function showDetails to show what it does when it's clicked
+    })
+  }
+
+  function showDetails (pokemon) {
+    console.log(pokemon.name);
+  }
+
   return { // returns the information of once added.
     add: add,
-    getAll: getAll
+    getAll: getAll,
+    addListItem: addListItem
   };
 })(); // IIFE is within local only ().
+
 const Psyduck = { name: 'Psyduck', height: 0.8, type: 'Water' };
 const Vulpix = { name: 'Vulpix', height: 0.6, type: 'Fire' };
 const Ninetales = { name: 'Ninetales', height: 1.1, type: 'Fire' };
 pokemonRepository.add(Psyduck);
 pokemonRepository.add(Vulpix);
 pokemonRepository.add(Ninetales);
-// You can choose which line you are going to comment with CTRL /
-// && (First False, Last Truth), || (First Truth, First False)
-// for (let i = 0; i < pokemonList.length; i++) {
-//   document.write('<br>' + '<p>' + ('<span>' + pokemonList[i].name + '</span>') + ' - (Height: ' + pokemonList[i].height + ' m)' + ' ' + '</p>'); // Can add HTML elements within JS.
-//   if (pokemonList[i].height >= 2) {
-//     document.write(' - "Wow, that\'s big!" ');
-//   }
-// }
-// Below is a basic function that can be written similar to above code
+
 pokemonRepository.getAll().forEach(function (pokemon) {
-  document.write('<br>' + '<p>' + ('<span>' + pokemon.name + '</span>') + ' - (Height: ' + pokemon.height + ' m)' + ' ' + '</p>');
-  if (pokemon.height >= 2) {
-    document.write(' - "Wow, that\'s big!" ');
-  }
+  pokemonRepository.addListItem(pokemon);
 });

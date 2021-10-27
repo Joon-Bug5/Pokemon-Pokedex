@@ -12,6 +12,7 @@
   --easter-red-color: rgba(201, 37, 25, 0.7);
   --white-color: #fff;
   --emerald-green-color: #50c878;
+  --royal-azure-color:#1866e1;
 }
 
 .page-header{
@@ -55,6 +56,17 @@ p{
 
 .list-title{
   text-decoration: underline;
+}
+
+.button-class{
+  border: none;
+  background-color: var(--royal-azure-color);
+  color: var(--ink-black-color);
+  border-radius: 5px;
+  border-bottom: 3px solid var(--white-color);
+  transition: .5s opacity;
+  text-align: center;
+  cursor: pointer;
 }
 
 span{
