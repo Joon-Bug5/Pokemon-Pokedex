@@ -31,7 +31,7 @@ let pokemonRepository = (function () {
   }
 
   function pokemonDetails (button, pokemon) {
-    button = button.addEventListener('click', function () {
+    button.addEventListener('click', function () {
       showDetails(pokemon);
     })
   }
