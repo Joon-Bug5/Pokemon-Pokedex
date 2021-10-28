@@ -10,6 +10,7 @@ let pokemonRepository = (function () {
     { name: 'Mew', height: 0.4, type: 'Psychic' },
     { name: 'Mewtwo', height: 2, type: 'Psychic' },
     { name: 'Eevee', height: 0.3, type: 'Normal' }];
+
   function add (pokemon) { // adding to the last list of the array
     pokemonList.push(pokemon);
   }
@@ -26,8 +27,12 @@ let pokemonRepository = (function () {
     button.classList.add('button-class'); // adding the class, which then you can create the style of the button on class
     listPokemon.appendChild(button);// showing the list as a button that was just created
     mainPokemon.appendChild(listPokemon);// showing the list in the class of the selector
-    button.addEventListener('click', function () { // addEventListener creates the function of what the button does when clicking
-      showDetails(pokemon)// from the other function showDetails to show what it does when it's clicked
+    pokemonDetails(button, pokemon);
+  }
+
+  function pokemonDetails (button, pokemon) {
+    button = button.addEventListener('click', function () {
+      showDetails(pokemon);
     })
   }
 
