@@ -3,9 +3,16 @@ let pokemonRepository = (function () {
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   function add (pokemon) { // adding to the last list of the array
-    pokemonList.push(pokemon);
+    if (
+      typeof pokemon === 'object' &&
+      'name' in pokemon
+    ) {
+      pokemonList.push(pokemon);
+    } else {
+      console.log('pokemon is not correct');
+    }
   }
-
+  
   function getAll () { // calls out the whole list of the array
     return pokemonList;
   }
