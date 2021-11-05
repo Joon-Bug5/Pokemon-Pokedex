@@ -15,7 +15,7 @@ let pokemonRepository = (function () {
 
     let titleElement = document.createElement('h1');
     titleElement.innerText = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
-
+// test
     let contentElement = document.createElement('p');
     contentElement.innerText = ' Height: ' + pokemon.height;
 
