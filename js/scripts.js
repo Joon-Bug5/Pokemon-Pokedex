@@ -35,7 +35,7 @@ let pokemonRepository = (function () {
     contentElement.innerText = ' Height: ' + pokemon.height;
 
     let imageElement = document.createElement('img');
-    imageElement.src = pokemon.imageUrl
+    imageElement.src = pokemon.imageUrl;
 
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
