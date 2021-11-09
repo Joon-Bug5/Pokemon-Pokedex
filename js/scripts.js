@@ -6,7 +6,8 @@ let pokemonRepository = (function () {
 
   searchBar.addEventListener('keyup', function () {
     let value = searchBar.value.toUpperCase();
-    let listPokemon = document.querySelectorAll('li');
+    let listPokemon = document.querySelectorAll('.pokemon-search');
+    let buttonClass = document.getElementsByClassName('button-class');
 
     listPokemon.forEach(function (pokemon) {
       pokemonValue = pokemon.textContent || pokemon.innerText
@@ -83,6 +84,7 @@ let pokemonRepository = (function () {
     let button = document.createElement('button'); // creates the button element
     button.innerText = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1); // name of the button in the inner text of the button
     button.classList.add('button-class'); // adding the class, which then you can create the style of the button on class
+    listPokemon.classList.add('pokemon-search');
     listPokemon.appendChild(button);// showing the list as a button that was just created
     mainPokemon.appendChild(listPokemon);// showing the list in the class of the selector
     pokemonDetails(button, pokemon);
