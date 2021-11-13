@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/normalize.css-master/normalize.css" />
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,40 +16,66 @@
 
 <body>
   <header class="page-header">
-    <img src="img/Logo.png" class="page-header__item" alt="Joonbug Developer Logo" />
-    <nav class="main-navigation page-header__item">
-      <ul role="menubar" class="navigation-list">
-        <li role="presentation">
-          <a href="https://joon-bug5.github.io/Portfolio-Website/" title="Home Page" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a> <!-- (The ../ means going back from a folder when needing to go backwards to grab from different level) -->
-        </li>
-        <li role="presentation">
-          <a href="https://joon-bug5.github.io/Portfolio-Website/about.html" title="About Me Page" role="menuitem" class="navigation-list__item">About Me</a> <!-- When adding # before the path, it'll go towards the other location of the word within same Page-->
-        </li>
-        <li role="presentation">
-          <a href="https://joon-bug5.github.io/Portfolio-Website/work.html" title="Work Page" role="menuitem" class="navigation-list__item">Work</a>
-        </li>
-        <li role="presentation">
-          <a href="https://joon-bug5.github.io/Portfolio-Website/contact.html" title="Contact Page" role="menuitem" class="navigation-list__item">Contact</a>
-        </li>
-      </ul>
+    <nav class="navbar navbar-expand-sm navbar-light">
+      <img src="img/Logo.png" class="page-header__item" alt="Joonbug Developer Logo" />
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav" role="menubar">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" title="Home Page" role ="menuitem" href="https://joon-bug5.github.io/Portfolio-Website/">Home</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" title="About Me Page" role="menuitem" href="https://joon-bug5.github.io/Portfolio-Website/about.html">About Me</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link"  title="Work Page" role="menuitem" href="https://joon-bug5.github.io/Portfolio-Website/work.html">Work</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" href="https://joon-bug5.github.io/Portfolio-Website/contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
   <main>
     <div class="pokemon-info">
       <h1>Pokédex</h1>
+      <h2 class="list-title">
+        List of 150 Pokémons Below!
+      </h2>
+      <div>
+        <p>Search for pokémons or scroll below in pokédex</p>
+      </div>
       <div class="search">
         <input type="text" class="search-item" placeholder="Search Pokemon..." title="Type in a Pokemon's name">
       </div>
       <a href='https://pngtree.com/so/search' class="reference">Search png from pngtree.com</a>
-      <h2 class="list-title">
-        List of 150 Pokémons Below!
-      </h2>
       <div class="pokemon">
-        <img src="img\Pokedex.png" class="pokedex-image" />
-        <ul class="pokemon-list"></ul>
+        <img src="img/Pokedex.png" alt="Picture of Pokedex" class="img-fluid" />
+        <ul class="list-group"></ul>
       </div>
-      <div class="modal-container"></div>
+
+      <div class="modal fade" id="pokemon-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -63,6 +90,9 @@
 
   <script src="js/promise-polyfill.js"></script>
   <script src="js/fetch-polyfill.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="js/scripts.js"  charset="utf-8"></script>
   <script src="js/tota11y.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
