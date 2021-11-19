@@ -31,9 +31,9 @@ let pokemonRepository = (function() {
 
     let titleElement = $(
       '<h1>' +
-        pokemon.name.charAt(0).toUpperCase() +
-        pokemon.name.slice(1) +
-        '</h1>'
+      pokemon.name.charAt(0).toUpperCase() +
+      pokemon.name.slice(1) +
+      '</h1>'
     );
     let imageElementFront = $('<img>');
     imageElementFront.attr('src', pokemon.image2);
@@ -133,14 +133,14 @@ let pokemonRepository = (function() {
         for (let i = 0; i < details.types.length; i++) {
           item.types.push(
             details.types[i].type.name.charAt(0).toUpperCase() +
-              details.types[i].type.name.slice(1)
+            details.types[i].type.name.slice(1)
           );
         }
         item.abilities = [];
         for (var i = 0; i < details.abilities.length; i++) {
           item.abilities.push(
             details.abilities[i].ability.name.charAt(0).toUpperCase() +
-              details.abilities[i].ability.name.slice(1)
+            details.abilities[i].ability.name.slice(1)
           );
         }
       })
